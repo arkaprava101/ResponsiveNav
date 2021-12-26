@@ -1,0 +1,124 @@
+:root {
+  --color-navbar: #c6d3ec;
+  --color-green-light: #7cb2c7;
+  --color-green-dark: #90b7c7;
+  --text-color: #676fa3;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Pushster", cursive;
+  background: linear-gradient(to right bottom, var(--color-green-light), var(--color-green-dark));
+  min-height: 100vh;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+.nav {
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-navbar);
+  position: relative;
+  transition: transform 1s;
+}
+.nav .logo {
+  width: 5rem;
+  height: 5rem;
+  margin-left: 5rem;
+  fill: #35589a;
+}
+.nav .nav__links {
+  font-size: 1.6rem;
+  display: flex;
+  margin-right: 5rem;
+}
+@media (max-width: 768px) {
+  .nav .nav__links {
+    background-color: #548cff;
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-right: 0;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateX(100%);
+    transition: transform 1s;
+  }
+}
+.nav .nav__links .nav__items {
+  list-style-type: none;
+}
+.nav .nav__links .nav__items:not(:last-child) {
+  margin-right: 4rem;
+}
+@media (max-width: 768px) {
+  .nav .nav__links .nav__items:not(:last-child) {
+    margin-right: 0;
+  }
+}
+.nav .nav__links .nav__link:link, .nav .nav__links .nav__link:visited {
+  color: var(--text-color);
+  text-decoration: none;
+}
+.nav .burger-menu {
+  display: none;
+  cursor: pointer;
+  flex-basis: 2.5rem;
+  position: relative;
+  margin-right: 4rem;
+}
+@media (max-width: 768px) {
+  .nav .burger-menu {
+    display: block;
+  }
+}
+.nav .burger-menu .line {
+  width: 100%;
+  height: 0.5rem;
+  margin: 0.5rem;
+  background-color: red;
+  transition: transform 0.5s;
+}
+.nav .rotate {
+  height: 3em;
+}
+.nav .rotate .line-2 {
+  display: none;
+}
+.nav .rotate .line-1 {
+  transform: translateY(1rem) rotate(45deg);
+}
+.nav .rotate .line-3 {
+  transform: rotate(-45deg);
+}
+@media (max-width: 768px) {
+  .nav .showmenu {
+    transform: translateX(0%);
+  }
+}
+
+
+
+
+/*# sourceMappingURL=/style.78032849.css.map */
